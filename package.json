@@ -1,8 +1,8 @@
 {
-  "name": "git-rollback-extension",
-  "displayName": "Git Rollback Extension",
-  "description": "在右键菜单中添加 Git Rollback 功能，执行 'git checkout master -- filepath' 回滚到上个版本。",
-  "version": "0.0.3",
+  "name": "git-checkout-extension",
+  "displayName": "Git Checkout Extension",
+  "description": "在 Python 文件右键菜单中添加恢复操作，执行 'git checkout master -- <file>' 将当前文件恢复为 master 分支上的版本。",
+  "version": "0.0.2",
   "publisher": "花小田",
   "engines": {
     "vscode": "^1.62.0"
@@ -11,14 +11,14 @@
     "Other"
   ],
   "activationEvents": [
-   
+    "onCommand:extension.gitCheckoutMaster"
   ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "extension.gitRollback",
-        "title": "Git Rollback"
+        "command": "extension.gitCheckoutMaster",
+        "title": "Git Checkout from Master"
       }
     ],
     "submenus": [
@@ -31,12 +31,13 @@
       "editor/context": [
         {
           "submenu": "extension.gitSubmenu"
-        
+       
         }
       ],
       "extension.gitSubmenu": [
         {
-          "command": "extension.gitRollback"
+          "command": "extension.gitCheckoutMaster"
+         
         }
       ]
     }
