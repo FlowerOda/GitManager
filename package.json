@@ -1,8 +1,8 @@
 {
   "name": "git-rollback-extension",
   "displayName": "Git Rollback Extension",
-  "description": "在右键菜单中添加 Git Rollback 功能，执行 'git reset --hard HEAD^' 回滚到上个版本。",
-  "version": "0.0.1",
+  "description": "在右键菜单中添加 Git Rollback 功能，执行 'git checkout master -- filepath' 回滚到上个版本。",
+  "version": "0.0.3",
   "publisher": "花小田",
   "engines": {
     "vscode": "^1.62.0"
